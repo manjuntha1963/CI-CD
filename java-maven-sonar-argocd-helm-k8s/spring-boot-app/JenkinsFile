@@ -6,6 +6,12 @@ pipeline {
     }
   }
   stages {
+        stage('Cleaning Workspace') {
+            steps {
+                cleanWs()
+            }
+  }
+  stages {
     stage('Checkout') {
       steps {
         sh 'echo passed'
